@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    color: var(--ben10-white);
+}
+
+:root {
+    --ben10-green: #4CAF50;        /* ✅ Verde Omnitrix — cor principal para botões, links e destaques */
+    --ben10-green-neon: #A4FF00;   /* ⚡ Verde Alienígena — cor de brilho, títulos ou efeitos neon */
+    --ben10-black: #000000;        /* 🖤 Preto do traje — ideal para fundos ou texto principal */
+    --ben10-white: #FFFFFF;        /* 🤍 Branco do traje — para textos sobre fundos escuros */
+    --ben10-gray: #666666;         /* 🌫️ Cinza urbano — para textos secundários ou bordas suaves */
+    --ben10-dark-green: #2E7D32;   /* 🌲 Verde escuro — bom pra fundos alternativos e menus */
+    --ben10-silver: #B0BEC5;       /* ⚙️ Prata metálico — detalhes, sombras leves ou divisores */
+    --ben10-lime: #C6FF00;         /* 💥 Verde vibrante — cor de destaque ou hover animado */
+  }
+  
+html,  body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+  
+body {
+    background-color: var(--ben10-black);
+    border: solid var(--ben10-green-neon);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+  }
+
+h1 {
+    text-align: center;
+    color: var(--ben10-green-neon);
+    background-color: var(--ben10-dark-green);
+    border: solid var(--ben10-white);
+    padding: 10px 40px 10px 40px;
+    margin: 20px 0px 20px 20px;
+    color: var(--ben10-white);
+  }
+
+#b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+#b img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--ben10-green-neon);
+    border-radius: 50%;
+  }
+
+h3 {
+    margin: 20px;
+}
+
+p {
+    background-color: #2E7D32;
+    margin: 50px;
+    padding: 10px;
+    border: solid 2px;
+}
+
+footer {
+    display: flex;
+}
