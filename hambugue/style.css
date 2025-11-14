@@ -1,13 +1,13 @@
 .desktop {
-  background-color: #ffffff;
+  background-color: #000000;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   min-height: 2000px;
   position: relative;
   overflow-x: hidden;
+  color: #ffffff;
 }
-
 
 .desktop .rectangle {
   position: absolute;
@@ -15,21 +15,15 @@
   left: 9px;
   width: 91px;
   height: 88px;
-  background-color: #d9d9d9;
+  background-color: #222222;
 }
 
 .desktop .baratie {
   position: absolute;
   top: 259px;
   left: 117px;
-  width: 175px;
-  text-shadow: 0px 4px 4px 4px #00000040;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
   font-size: 35px;
-  letter-spacing: 0;
-  line-height: normal;
+  color: #ffffff;
 }
 
 .desktop .image {
@@ -37,70 +31,39 @@
   left: 11px;
   width: 99px;
   height: 88px;
-  aspect-ratio: 1.13;
   position: absolute;
-  object-fit: cover;
 }
 
 .desktop .text-wrapper {
   position: absolute;
   top: 383px;
   left: 586px;
-  width: 165px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.desktop .group {
-  position: absolute;
-  top: 383px;
-  left: 226px;
-  width: 921px;
-  height: 72px;
+  color: #ffffff;
 }
 
 .desktop .div {
   position: absolute;
   top: 418px;
   left: 595px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #228b22;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  color: #32cd32;
 }
 
 .desktop .p {
   position: absolute;
   top: 319px;
   left: 123px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  color: #ffffff;
 }
 
 .desktop .text-wrapper-2 {
   position: absolute;
   top: 399px;
   left: 280px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #228b22;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  color: #32cd32;
 }
 
 .desktop .img {
@@ -116,34 +79,16 @@
   position: absolute;
   top: 384px;
   left: 864px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  color: #ffffff;
 }
 
 .desktop .element {
   position: absolute;
   top: 423px;
   left: 927px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #228b22;
   font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.desktop .text-on-a-path {
-  position: absolute;
-  top: 581px;
-  left: 501px;
-  width: 191px;
-  height: 88px;
+  color: #32cd32;
 }
 
 .desktop .image-2 {
@@ -151,181 +96,73 @@
   left: 438px;
   width: 522px;
   height: 348px;
-  aspect-ratio: 1.5;
   position: absolute;
   object-fit: cover;
 }
 
-.desktop .rectangle-2 {
-  position: absolute;
-  top: 694px;
-  left: 500px;
-  width: 191px;
-  height: 79px;
+.mais-pedidos-container1 {
+  margin-top: 900px;
+  padding: 20px;
+  color: #ffffff;
 }
 
-.desktop .rectangle-3 {
-  position: absolute;
-  top: 613px;
-  left: 496px;
-  width: 191px;
-  height: 81px;
+.mais-pedidos-container {
+  margin-top: 100px;
+  padding: 20px;
+  color: #ffffff;
 }
 
-.desktop .batatas-black-leg {
-  position: absolute;
-  top: 618px;
-  left: 508px;
-  width: 161px;
-  height: 20px;
-}
-
-.desktop .a-batata-picante-com {
-  position: absolute;
-  top: 638px;
-  left: 499px;
-  width: 193px;
-  height: 137px;
-}
-
-.desktop .text-wrapper-4 {
-  position: absolute;
-  top: 939px;
-  left: 644px;
-  width: 163px;
-  -webkit-text-stroke: 1px #947f7f;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.desktop .rectangle-4 {
-  position: absolute;
-  top: 1610px;
-  left: 1181px;
-  width: 213px;
-  height: 203px;
-  object-fit: cover;
-}
-
-.desktop .rectangle-5 {
-  position: absolute;
-  top: 1036px;
-  left: 1181px;
-  width: 213px;
-  height: 203px;
-  object-fit: cover;
-}
-
-.desktop .rectangle-6 {
-  position: absolute;
-  top: 1323px;
-  left: 1181px;
-  width: 213px;
-  height: 203px;
-  object-fit: cover;
-}
-
-.desktop .text-wrapper-5 {
-  top: 1036px;
-  left: 46px;
-  position: absolute;
-  font-family: "Instrument Serif-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
+.mais-pedidos-container h2 {
   font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
 }
 
-.desktop .text-wrapper-6 {
-  position: absolute;
-  top: 1319px;
-  left: 46px;
-  font-family: "Instrument Serif-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+.card-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111111;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px #ffffff10;
+  transition: transform .20s ease, box-shadow .20s ease;
+  color: #ffffff;
 }
 
-.desktop .text-wrapper-7 {
-  top: 1610px;
-  left: 51px;
-  position: absolute;
-  font-family: "Instrument Serif-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+.card-linha:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #ffffff30;
 }
 
-.desktop .p-o-brioche-tostado {
-  position: absolute;
-  top: 1658px;
-  left: 46px;
-  width: 736px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+.card-linha .info {
+  width: 70%;
+  color: #ffffff;
 }
 
-.desktop .text-wrapper-8 {
-  position: absolute;
-  top: 1085px;
-  left: 46px;
-  width: 750px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.desktop .text-wrapper-9 {
-  position: absolute;
-  top: 1370px;
-  left: 46px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.desktop .text-wrapper-10 {
-  position: absolute;
-  top: 1502px;
-  left: 51px;
-  width: 127px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #228b22;
+.card-linha h3 {
   font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.desktop .text-wrapper-11 {
-  position: absolute;
-  top: 1209px;
-  left: 46px;
-  width: 132px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #228b22;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: normal;
+.card-linha p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.card-linha .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #32cd32;
+}
+
+.card-linha img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
 }
