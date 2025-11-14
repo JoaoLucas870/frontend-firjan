@@ -112,6 +112,12 @@
   color: #ffffff;
 }
 
+#h21 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+
 .mais-pedidos-container h2 {
   font-size: 32px;
   text-align: center;
@@ -165,4 +171,10 @@
   height: 130px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.fim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

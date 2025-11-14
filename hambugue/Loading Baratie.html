@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baratie — Tela de Carregamento</title>
+  <style>
+    /* Reset simples */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+
+    /* Container */
+    .loader-wrap{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(180deg,#0f1724 0%, #0b1220 60%);
+      color:#fff;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      overflow:hidden;
+      position:relative;
+    }
+
+    /* Card com sombra suave */
+    .loader-card{
+      width:min(520px,92%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:28px;
+      text-align:center;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+      position:relative;
+    }
+
+    /* Nome Baratie - estilo "mar" e restaurante */
+    .brand{
+      font-weight:700;
+      font-size:38px;
+      letter-spacing:1px;
+      margin-bottom:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+    }
+    .brand .fish{
+      width:46px;height:46px;border-radius:50%;display:inline-grid;place-items:center;
+      background:linear-gradient(135deg,#ffd166,#ef476f);
+      box-shadow: 0 6px 18px rgba(239,71,111,0.18);
+      transform:rotate(-15deg);
+      font-weight:800;color:#0b1220;
+    }
+
+    .sub{font-size:13px;opacity:0.8;margin-bottom:18px}
+
+    /* Barra de progresso estilizada */
+    .progress{
+      height:14px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden;margin:0 auto 16px;max-width:460px;
+    }
+    .progress > i{
+      display:block;height:100%;width:0%;background:linear-gradient(90deg,#ffd166,#ef476f);border-radius:999px;transition:width 480ms cubic-bezier(.2,.9,.2,1);
+      box-shadow: 0 6px 16px rgba(239,71,111,0.18) inset;
+    }
+
+    /* Porcentagem + loader pequeno */
+    .meta{display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px}
+    .dot{
+      width:12px;height:12px;border-radius:50%;background:#ffd166;box-shadow:0 6px 20px rgba(0,0,0,0.4);
+      animation:ping 1.4s infinite ease-in-out;
+    }
+    @keyframes ping{0%{transform:scale(.85);opacity:0.9}50%{transform:scale(1.15);opacity:1}100%{transform:scale(.9);opacity:0.95}}
+
+    /* Animação de ondas decorativas */
+    .waves{position:absolute;left:0;right:0;bottom:-6%;height:50%;pointer-events:none;opacity:0.12}
+    .wave{position:absolute;left:50%;transform:translateX(-50%);width:180%;height:100%;background:radial-gradient(ellipse at center, rgba(255,255,255,0.04), transparent 45%);border-radius:50%;animation:float 6s ease-in-out infinite}
+    .wave:nth-child(2){animation-duration:9s;opacity:0.08}
+    @keyframes float{0%{transform:translateX(-55%) translateY(0)}50%{transform:translateX(-45%) translateY(-10px)}100%{transform:translateX(-55%) translateY(0)}}
+
+    /* Quando carregou: efeito de desaparecer */
+    .loaded .loader-card{opacity:0;transform:translateY(-12px);transition:all .6s ease}
+    .loaded{
+      background: #0b1220;
+      transition: background 0.6s ease;
+    }
+
+    /* Responsividade */
+    @media (max-width:420px){
+      .brand{font-size:28px}
+      .brand .fish{width:40px;height:40px}
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrap" id="loaderWrap" role="status" aria-live="polite">
+    <div class="loader-card" id="loaderCard">
+      <div class="brand">
+        <div class="fish">B</div>
+        <div>Baratie</div>
+      </div>
+      <div class="sub">Preparando sabores... carregando recursos</div>
+
+      <div class="progress" aria-hidden="true">
+        <i id="bar"></i>
+      </div>
+
+      <div class="meta">
+        <div class="dot" aria-hidden="true"></div>
+        <div id="percent" aria-hidden="true">0%</div>
+      </div>
+    </div>
+
+    <div class="waves" aria-hidden="true">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+  </div>
+
+  <script>
+    // Simula carregamento realista. Altere duration para testar comportamentos.
+    (function(){
+      const bar = document.getElementById('bar');
+      const percent = document.getElementById('percent');
+      const wrap = document.getElementById('loaderWrap');
+      const card = document.getElementById('loaderCard');
+
+      let value = 0;
+      // curvas para parecer mais natural: rápido no início, lento no fim
+      function step(){
+        // incremento dinâmico: quanto maior o valor, menor o salto
+        const delta = Math.max(1, Math.floor((100 - value) / 8));
+        value += Math.floor(Math.random() * delta) + 1;
+        if(value > 100) value = 100;
+        bar.style.width = value + '%';
+        percent.textContent = value + '%';
+
+        if(value < 100){
+          // tempo aleatório entre 120ms e 600ms
+          const t = 120 + Math.random() * 480;
+          setTimeout(step, t);
+        } else {
+          // pequeno atraso quando chega a 100% para suavizar
+          setTimeout(()=>{
+            wrap.classList.add('loaded');
+            // esconde o loader completamente após transição
+            setTimeout(()=>{wrap.style.display='none'},700);
+            // redireciona automaticamente para a página principal
+            window.location.href = "index.html";()
+          },450);
+        }
+      }
+
+      // começa após pequena pausa para o usuário perceber
+      setTimeout(step,350);
+
+      // interface pública simples: se quiser forçar completar
+      window.baratieLoader = {
+        set(percent){
+          const p = Math.max(0, Math.min(100, Math.floor(percent)));
+          value = p;
+          bar.style.width = value + '%';
+          percentEl = document.getElementById('percent');
+          if(percentEl) percentEl.textContent = value + '%';
+          if(value>=100){
+            wrap.classList.add('loaded');
+            setTimeout(()=>{wrap.style.display='none'},700);
+          }
+        }
+      };
+    })();
+  </script>
+</body>
+</html>
